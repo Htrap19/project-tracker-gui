@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Importing the bootstrap css
-import 'bootstrap/dist/css/bootstrap.min.css'
+// Importing the tailwindcss
+import './helpers/styles/tailwind.css'
 
 ReactDOM.render(
   <React.StrictMode>

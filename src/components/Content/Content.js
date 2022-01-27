@@ -1,9 +1,11 @@
 import React from "react";
-import './Content.css'
+
+import NavigationBar from "./NavigationBar/NavigationBar";
 
 const Content = () => {
     return (
-        <div id="content">
+        <div className="bg-midnight w-full text-stone-300">
+            <NavigationBar />
         </div>
     )
 }
