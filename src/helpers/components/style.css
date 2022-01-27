@@ -1,0 +1,8 @@
+.normal-button {
+    border: none;
+    border-radius: 5px;
+    color: #ecf0f1;
+    text-align: center;
+    margin: 0;
+    padding: 4px 10px;
+}
