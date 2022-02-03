@@ -1,5 +1,5 @@
 @tailwind base;
-@tailwind component;
+@tailwind components;
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
@@ -7,4 +7,26 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background: #fafafa;
+}
+
+@layer components {
+  .my-base-input {
+    @apply relative z-0 mb-6
+  }
+
+  .my-base-input > label {
+    @apply block mb-2 text-sm font-medium text-stone-300
+  }
+
+  .my-base-input > input {
+    @apply bg-midnight-light border border-midnight-lighter text-stone-300 text-sm rounded-lg focus:border-green-500 block w-full p-2.5
+  }
+
+  .my-base-input > textarea {
+    @apply block p-2.5 w-full text-sm text-stone-300 bg-midnight-light rounded-lg border border-midnight-lighter focus:border-green-500
+  }
+
+  .my-base-input > select {
+    @apply bg-midnight-light border border-midnight-lighter text-stone-300 text-sm rounded-lg focus:border-green-500 block w-full p-2.5
+  }
 }

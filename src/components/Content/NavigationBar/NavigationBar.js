@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavigationBar = () => {
+const NavigationBar = ({ changeContentRoute }) => {
     return (
         <header className="text-gray-600 body-font">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -9,11 +9,12 @@ const NavigationBar = () => {
                     <span className="ml-3 text-xl text-stone-300">MyProject1</span>
                 </a>
                 <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center text-stone-300">
-                    <a href="#" className="mr-5 hover:text-stone-400 hover:underline">Details</a>
-                    <a href="#" className="mr-5 hover:text-stone-400 hover:underline">Assets</a>
-                    <a href="#" className="mr-5 hover:text-stone-400 hover:underline">Dependencies</a>
+                    <a href="#" className="mr-5 hover:text-stone-400 hover:underline" onClick={() => { changeContentRoute("ProjectDetails") }}>Details</a>
+                    <a href="#" className="mr-5 hover:text-stone-400 hover:underline" onClick={() => { changeContentRoute("ProjectAssets") }}>Assets</a>
+                    {/* <a href="#" className="mr-5 hover:text-stone-400 hover:underline" onClick={() => { changeContentRoute("ProjectDependencies") }}>Dependencies</a> */}
+                    <a href="#" className="mr-5 hover:text-stone-400 hover:underline" onClick={() => { changeContentRoute("ProjectManagement") }}>Management(Kanban)</a>
                 </nav>
-                <button className="inline-flex items-center bg-green-600 border-0 py-1 px-3 focus:outline-none hover:bg-green-500 rounded text-base mt-4 md:mt-0 text-stone-300">Submit
+                <button className="inline-flex items-center bg-green-600 border-0 py-1 px-3 focus:outline-none hover:bg-green-500 rounded text-base mt-4 md:mt-0 text-stone-300">Persist
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                     </svg>

@@ -3,13 +3,20 @@ import React, { Component } from "react";
 
 class Button extends Component {
 
+    displayText = (text) => {
+        if (text === '')
+            return '';
+        
+        return text
+    }
+
     render() {
-        const { text, img, extraClassNames = "", extraStyle = {} } = this.props;
+        const { text, icon, onClick, extraClassNames = "", extraStyle = {} } = this.props;
 
         return (
-            <button type="button" className={"rounded py-1 px-3 " + extraClassNames} style={extraStyle}>
-                { img ? <FontAwesomeIcon icon={img} style={{ marginRight: '5px' }} /> : null }
-                {text}
+            <button type="button" className={"rounded py-1 px-3 " + extraClassNames} style={extraStyle} onClick={onClick}>
+                { icon ? <FontAwesomeIcon icon={icon} style={{ marginRight: '5px' }} /> : null }
+                { this.displayText(text) }
             </button>
         );
     }
