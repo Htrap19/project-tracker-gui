@@ -15,26 +15,11 @@ class Content extends Component {
         this.setState({ contentRoute: newRoute })
     }
 
-    currentContent = (route) => {
-        if (route === 'MainContent')
-        {
-            return (
-                <div>
-                    <NavigationBar changeContentRoute={this.changeContentRoute} />
-                    <MainContent contentRoute={this.state.contentRoute} />
-                </div>
-            )
-        }
-        else if (route === 'NewProject')
-            return (
-                <div></div>
-            )
-    }
-
     render() {
         return (
             <div className="bg-midnight w-full text-stone-300">
-                { this.currentContent(this.props.route) }
+                <NavigationBar changeContentRoute={this.changeContentRoute} />
+                <MainContent contentRoute={this.state.contentRoute} />
             </div>
         )
     }

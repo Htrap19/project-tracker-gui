@@ -10,7 +10,7 @@ const ProjectDetails = () => {
             </div>
             <div className="my-base-input group">
                 <label htmlFor="description">Description</label>
-                <textarea type="text" id="description" />
+                <textarea id="description" />
             </div>
             <div className='grid xl:grid-cols-2 xl:gap-6'>
                 <div className="my-base-input group">

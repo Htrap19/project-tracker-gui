@@ -9,7 +9,7 @@ const Sidebar = ({ changeRoute }) => {
         <nav id="sidebar" className="bg-midnight-light min-w-[350px] max-w-[350px] min-h-screen p-6">
             <div className="flex flex-row justify-between items-center border-b border-midnight-lighter pb-2">
                 <p className="text-stone-300">Projects</p>
-                <Button text="New" extraClassNames="bg-green-600 hover:bg-green-500 text-stone-300" icon={faFolderPlus} onClick={changeRoute} />
+                <Button text="New" extraClassNames="bg-green-600 hover:bg-green-500 text-stone-300" icon={faFolderPlus} onClick={() => { changeRoute("NewProject") }} />
             </div>
 
             <ul className="p-2 list-none overflow-y-auto max-h-full">
