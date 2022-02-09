@@ -25,7 +25,7 @@ class NewProject extends Component {
                     <div className='flex flex-row justify-between items-center border-b border-midnight-lighter'>
                         <div className='flex flex-col justify-between items-start mb-4'>
                             <h2 className='text-stone-300 text-xl'>Create New Project</h2>
-                            <p className='text-stone-400 text-sm'>A project is a high level representation of a real project</p>
+                            <p className='text-stone-400 text-sm'>A project is a high level representation of a software(API, Mobile App, etc...),<br/> and contains all the assets and dependencies without any source code.</p>
                         </div>
                     </div>
                     <div className='grid xl:grid-cols-2 xl:gap-6 mt-4'>

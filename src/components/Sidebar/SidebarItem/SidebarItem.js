@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const SidebarItem = ({ label, icon, ref = '#' }) => {
+const SidebarItem = ({ label, icon, onClick = () => {} }) => {
     return (
         <li>
-            <a href={ref} className="p-[5px] block text-stone-300 hover:underline"><FontAwesomeIcon icon={icon} style={{ marginRight: '5px' }} />{label}</a>
+            <p onClick={onClick} className="p-[5px] block text-stone-300 hover:underline cursor-pointer"><FontAwesomeIcon icon={icon} style={{ marginRight: '5px' }} />{label}</p>
         </li>
     )
 }

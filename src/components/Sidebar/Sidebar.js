@@ -4,7 +4,7 @@ import Button from '../../helpers/components/Button'
 import { faFolderPlus, faFolder } from '@fortawesome/free-solid-svg-icons'
 import SidebarItem from "./SidebarItem/SidebarItem";
 
-const Sidebar = ({ changeRoute }) => {
+const Sidebar = ({ changeRoute, changeProjectRoute }) => {
     return (
         <nav id="sidebar" className="bg-midnight-light min-w-[350px] max-w-[350px] min-h-screen p-6">
             <div className="flex flex-row justify-between items-center border-b border-midnight-lighter pb-2">
@@ -13,7 +13,7 @@ const Sidebar = ({ changeRoute }) => {
             </div>
 
             <ul className="p-2 list-none overflow-y-auto max-h-full">
-                <SidebarItem label="projects/MyProject1" icon={faFolder} />
+                <SidebarItem label="projects/MyProject1" icon={faFolder} onClick={() => { changeProjectRoute("Project1") }} />
                 <SidebarItem label="projects/MyProject2" icon={faFolder} />
                 <SidebarItem label="projects/MyProject3" icon={faFolder} />
             </ul>
